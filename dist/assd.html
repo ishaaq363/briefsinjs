@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="greeting"></h1>
+    <h1 id="time"></h1>
+    <button onclick="myfunc()">Tap Here</button>
+    <script>
+      function myfunc() {
+        var time = new Date().getHours();
+        var greeting;
+        if (time<9){
+            greeting="goodmorning"
+            document.body.style.backgroundColor="blue"
+        }
+        else if (time<15){
+            greeting="goodafternoon"
+            document.body.style.backgroundColor="cyan"
+        }
+        else if (time<10){
+            greeting="goodevening"
+            document.body.style.backgroundColor="black"
+        }
+        else if (time<21){
+            greeting="goodnight"
+            document.body.style.backgroundColor="yellow"
+        }
+        document.getElementById("time").innerHTML=time
+        document.getElementById("greeting").innerHTML=greeting
+
+      }
+      
+    </script>
+  </body>
+</html>
